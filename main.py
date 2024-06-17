@@ -112,7 +112,7 @@ def main():
     df = pd.DataFrame(selected_sample)
 
     # Display the selected sample data
-    st.header(f"Sample Data: {st.session_state["current_question"]}")
+    st.header(f'Sample Data: {st.session_state["current_question"]}')
     json_tab, xml_tab, df_tab = st.tabs(["JSON", "XML", "CSV/Excel"])
 
     with json_tab:
