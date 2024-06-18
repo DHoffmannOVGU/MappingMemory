@@ -256,9 +256,9 @@ def main():
                 column_list[i].error(f"Incorrect rule for {schema}")
                 st.session_state.matched_entries -= 1
 
-        if st.button("Click to see if you completed the level", use_container_width=True):
-            if st.session_state.matched_entries == 3:
-                st.balloons()
+    if st.button("Click to see if you completed the level", use_container_width=True):
+        if st.session_state.matched_entries == 3:
+            st.balloons()
 
     with st.expander("Step 5: Export the Data", expanded=False):
         pass
@@ -277,6 +277,7 @@ session_states = {
 }
 
 if __name__ == "__main__":
+    st.set_page_config(page_title="Mapping Memory", page_icon="🧠")
     for session_state in session_states:
         if session_state not in st.session_state:
             st.session_state[session_state] = session_states[session_state]
