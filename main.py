@@ -208,7 +208,7 @@ def main():
         except:
             filtered_df = df
         cleaned_df = filtered_df.dropna(axis=1, how='all')
-        #st.dataframe(cleaned_df, use_container_width=True)
+        st.dataframe(cleaned_df, use_container_width=True)
         data_attribute_list = cleaned_df.columns
         schema_attribute_list = person_schema[selected_schema_2]["attributes"]
         #Define a new df with 2 columns: first the schema attributes with its entries, then the data attributes with its entries
